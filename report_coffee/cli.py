@@ -21,3 +21,11 @@ def parse_args(argv=None):
     )
     # Если argv=None, argparse возьмёт аргументы из командной строки.
     return parser.parse_args(argv)
+
+
+def main(argv=None) -> int:
+    # Точка входа CLI: пока только проверяем, что аргументы разобраны корректно.
+    args = parse_args(argv)
+    print(f"Файлы: {args.files}")
+    print(f"Отчёт: {args.report}")
+    return 0
